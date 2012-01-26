@@ -1,0 +1,41 @@
+<div class="tab_content_inner"> 
+
+<% @messages.each do |message| %>
+<div class="row">
+ <div class="four columns offset-by-eight links">
+    <%=link_to "Show", [:admin, message], class:"show_link" %>
+    <%=link_to "Edit", edit_admin_message_path(message), class:"edit_link" %>
+    <%=link_to "Delete", [:admin, message], class:"delete_link", method: :delete, confirm: "Are you sure?" %>
+  </div><!--links-->
+</div><!--row-->
+<ul class="message">
+<li class="row">
+  <strong class="three columns">Name</strong>
+  <span class="nine columns"><%= message.name %></span>
+</li>
+
+<li class="row">
+  <strong class="three columns">Email</strong>
+  <span class="nine columns"><%= message.email %></span>
+</li>
+
+
+<li class="row">
+  <strong class="three columns">Website</strong>
+  <span class="nine columns"><%= message.website %></span>
+</li>
+
+
+<li class="row">
+  <strong class="three columns">Subject</strong>
+  <span class="nine columns"><%= message.subject %></span>
+</li>
+
+<li class="row">
+  <strong class="three columns">Message</strong>
+  <span class="nine columns"><%= message.message %></span>
+</li>
+</ul>
+<% end %>
+</div><!--tab_content_inner-->
+<%= will_paginate(@messages, :param_name => 'messages_page') %>

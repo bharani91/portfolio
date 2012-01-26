@@ -1,0 +1,71 @@
+<div class="row show-on-desktops">
+  <div class="three columns left quote">
+    <blockquote>"At the end of the day, the numbers that we're hearing are not going to be totally correct or not correct at all."<cite>Eugene Levy</cite></blockquote>
+    
+  </div><!--three columns-->
+  <div class="nine columns left">
+    <div class="panel stats">
+      <div class="panel_inner">
+    	  <h3>Your site in numbers.</h3>
+    	  <h4 class="offset-by-one"><%= link_to pluralize(@projects_count, "Project") , admin_projects_path %>, <%= link_to pluralize(@posts_count, "Blog post"), admin_pages_path %> and <%= link_to pluralize(@messages_count, "Message"), admin_messages_path %></span></h4>
+    	</div><!--panel-inner-->
+    </div><!--panel-->
+  </div>
+</div><!--row-->
+
+<div class="row">
+  <div class="three columns left side_links">
+  <dl class="nice vertical tabs">
+    <dd>
+      <a href="#item1" class="active">Projects
+        <span>You have <%= pluralize(@projects_count, "project") %>.</span>
+      </a>
+    </dd>
+    <dd><a href="#item2">Blog
+        <span>You have <%= pluralize(@posts_count, "blog post") %>.</span>
+        </a>
+    </dd>
+    <dd><a href="#item3">Messages
+        <span>You have <%= pluralize(@messages_count, "message") %>.</span>
+      </a></dd>
+  </dl>
+  </div><!--three columns-->
+
+ <div class="nine columns left tab_content">
+  <ul class="nice tabs-content contained">
+  <li class="active" id="item1Tab">
+     
+    <h2 class="heading">Your projects
+        <%= link_to "New Project", new_admin_project_path, class: "right small nice button" %>
+      </h2>
+   
+   <div id="project">
+      <%= render "project"%>
+   </div><!--product-->
+  </li><!--vertical1-->
+
+
+  <li id="item2Tab">
+  <h2 class="heading">Recent blog posts
+    <%= link_to "New Post", new_admin_page_path, class: "right small nice button" %>
+    </h2>
+     <div id="blog_post">
+       <%= render "blog_post" %>
+      </div><!--blog_post-->
+  </li><!--vertical2-->
+
+
+  <li id="item3Tab">
+    <h2 class="heading">Recent Messages
+      <%= link_to "View all messages", admin_messages_path, class: "right small nice button" %>
+      </h2>
+      <div id="message">
+        <%= render "message" %>
+      </div><!--message-->
+  </li><!--vertical3-->
+
+  </ul><!--nice tabs content-->
+  
+  </div><!--right-->
+</div><!--row-->
+

@@ -1,0 +1,33 @@
+<div class="tab_content_inner">
+ 
+  <% @projects.each do |project| %>
+
+      <div class="row">
+        <h3 class="eight columns title"><%= project.title %></h3>
+        <div class="four columns links">
+          <%=link_to "Show", [:admin, project], class:"show_link" %>
+          <%=link_to "Edit", edit_admin_project_path(project), class:"edit_link" %>
+          <%=link_to "Delete", [:admin, project], class:"delete_link", method: :delete, confirm: "Are you sure?" %>
+        </div><!--links-->
+      </div><!--row-->
+      <span class="meta"> Last updated on: <%= project.updated_at.strftime("%d %B %Y") %>
+        <% if project.tags.any? %>
+         <span class="tags">Tagged with: 
+          <% project.tags.each do |tag| %>
+            <%= link_to tag.name, tag_path(tag.name) %>
+          <% end %>
+         </span>
+        <% end %>
+      </span><!--meta-->
+
+      <div class="img_wrapper">
+        <%= image_tag(project.photos.first.image.url)%>
+      </div><!--img_wrapper-->
+
+      <div class="description">
+        <%= markdown(project.description) %>
+      </div><!--description-->
+
+  <% end %>
+ </div><!--tab_content_inner-->
+ <%= will_paginate(@projects, :param_name => 'products_page') %>

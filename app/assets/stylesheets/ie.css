@@ -1,0 +1,16 @@
+p.sub_heading	{
+	display: none;
+	}
+
+section#content div.links	{
+	width: 700px;
+	}
+	
+header#top_bar ul	{
+	width: 880px;
+	}
+	
+section#content	{	
+	margin-top: 50px;
+	margin-bottom:0;
+	}

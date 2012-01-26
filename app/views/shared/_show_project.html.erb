@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @project.title %>
+</p>
+
+<p>
+  <b>Tags:</b>
+  <% @project.tags.each do |tag| %>
+    <%= link_to tag.name, tag_path(tag.name) %>
+  <% end %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= markdown(@project.description) %>
+</p>
+
+<p>
+  <b>Image:</b>
+  <% @project.photos.each do |photo| %>
+    <%= image_tag photo.image.url %>
+  <% end %>
+</p>

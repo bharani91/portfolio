@@ -1,0 +1,35 @@
+<div class="content">
+  <div class="row">
+    <div class="content_inner clearfix">
+<ul class="twelve columns listing">
+  <header>
+      <h2>Messages</h2>   
+  </header>
+  
+  <% @messages.each_with_index do |message, index| %>
+    <li class="<%= cycle('even', 'odd') %>">
+      <ul class="message_list">
+        <div class="row">
+          <h4 class="eight columns message_number">Message #<%= index + 1 %></h4>
+        <div class="four columns links">
+          <div class="right">
+            <%=link_to "Delete", [:admin, message], class:"delete_link", method: :delete, confirm: "Are you sure?" %>
+          </div>
+        </div><!--links-->
+      </div><!--row-->
+        <li class="row"><span class="two columns">From:</span> <strong><%= message.name %></strong></li>
+        <li><span class="two columns">Email:</span> <strong><%= message.email %></strong></li>
+        <li><span class="two columns">Website:</span> <strong><%= message.website unless message.website.blank? %></strong></li>
+        <li><span class="two columns">Subject:</span> <strong><%= message.subject %></strong></li>
+        <li><%= message.message %></li>
+
+      </ul>
+      
+    </li>
+  <% end %>
+</ul><!--listing-->
+  
+  </div>
+
+</div><!--row-->
+</div><!--content-->

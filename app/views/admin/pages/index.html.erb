@@ -1,0 +1,58 @@
+<div class="content">
+  <div class="row">
+    <div class="content_inner clearfix">
+<ul class="twelve columns listing">
+  <header>
+  <h2 class="nine columns show-on-desktops">Listing all Blog posts</h2>
+   <div class="three columns"><%= link_to "New Post", new_admin_page_path, class:" right nice button" %></div>
+   </header>
+  <% @pages.each do |page| %>
+    <li class="<%= cycle('even', 'odd') %>">
+      <div class="header row">
+        <h3 class="title nine columns"><%= page.title %> 
+        <% if page.blog_post? %>
+          <span class="visible_as_post">(Visible as blog post)</span>
+        <% end %>
+          
+        </h3>
+        <div class="date_published three columns">
+          <span class="date"><%= page.updated_at.strftime("%d %b %Y")%></span>
+          
+        </div><!-- date_published-->
+      </div><!--header--> 
+      
+      <div class="row tag_container">
+        <div class="tag_list eight columns show-on-desktops">
+          <% if page.tags.any? %>
+           <span class="tags">Tagged with: 
+            <% page.tags.each do |tag| %>
+              <%= link_to tag.name, tag_path(tag.name) %>
+            <% end %>
+           </span>
+          <% end %>
+        </div><!--tag_list-->
+        
+       <div class="four columns links">
+          <div class="right">
+            <%=link_to "Show", [:admin, page], class:"show_link" %>
+            <%=link_to "Edit", edit_admin_page_path(page), class:"edit_link " %>
+            <%=link_to "Delete", [:admin, page], class:"delete_link", method: :delete, confirm: "Are you sure?" %>
+          </div>
+        </div><!--links-->
+      </div><!--row-->
+
+      <div class="row post_holder">
+        <div class=" twelve columns description">
+          <div class="description_inner">
+            <%= markdown(page.content) %>
+          </div><!--description_inner-->
+        </div><!--description-->
+      </div><!--row-->
+      
+    </li>
+  <% end %>
+</ul><!--listing-->
+  </div>
+</div><!--row-->
+</div><!--content-->
+

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Portfolium | Admin</title>
+  <%= stylesheet_link_tag    "admin" %>
+  <%= javascript_include_tag "admin" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  
+    <header id="admin_bar">
+      <div class="row">
+            <div class="three columns left">
+              <h1 class="logo">
+                <%= link_to "Portfolium", root_path %>
+              </h1><!--logo-->
+            </div><!--three-columns-->
+    
+    
+          <nav class="right show-on-desktops">
+            <ul class="nav-bar">
+              	<% if current_user %>
+              	    <li><%= link_to "Dashboard", admin_dashboard_path, class:"dashboard"%></li>
+                    <li><%= link_to "Projects", admin_projects_path, class:"project"%></li>
+                    <li><%= link_to "Blog", admin_pages_path, class:"blog"%></li>
+                    <li><%= link_to "Messages", admin_messages_path, class:"messages"%></li>
+                  <% end %>
+            </ul><!--nav-bar-->
+            
+            
+          </nav>
+          <a href="<%= logout_path %>" title="Logout"><%= image_tag avatar_url(current_user), class:"avatar right show-on-desktops" %></a>
+          
+          
+      </div><!--row-->
+    </header>
+      
+     
+  <div class="container">  
+
+        <%= yield %>
+    
+  </div>
+  
+  
+  <div class="footer">
+      <p class="row">Lovingly crafted by <%=link_to "Bharani M.", "http://github.com/bharani91"%></p>
+  </div>
+</body>
+</html>

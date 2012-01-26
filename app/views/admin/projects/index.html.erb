@@ -1,0 +1,56 @@
+<div class="content">
+  <div class="row">
+    <div class="content_inner clearfix">
+<ul class="twelve columns listing">
+  <header>
+  <h2 class="nine columns show-on-desktops">Listing all projects</h2>
+   <div class="three columns"><%= link_to "New Post", new_admin_project_path, class:" right nice button" %></div>
+   </header>
+  <% @projects.each do |project| %>
+    <li class="<%= cycle('even', 'odd') %>">
+      <div class="header row">
+        <h3 class="title nine columns"><%= project.title %></h3>
+        <div class="date_published three columns">
+          <span class="date"><%= project.updated_at.strftime("%d %b %Y")%></span>
+        </div><!-- date_published-->
+      </div><!--header--> 
+      
+      <div class="row tag_container">
+        <div class="tag_list eight columns show-on-desktops">
+          <% if project.tags.any? %>
+           <span class="tags">Tagged with: 
+            <% project.tags.each do |tag| %>
+              <%= link_to tag.name, tag_path(tag.name) %>
+            <% end %>
+           </span>
+          <% end %>
+        </div><!--tag_list-->
+        
+        
+        
+        <div class="four columns links">
+          <div class="right">
+            <%=link_to "Show", [:admin, project], class:"show_link" %>
+            <%=link_to "Edit", edit_admin_project_path(project), class:"edit_link " %>
+            <%=link_to "Delete", [:admin, project], class:"delete_link", method: :delete, confirm: "Are you sure?" %>
+          </div>
+        </div><!--links-->
+      </div><!--row-->
+
+      <div class="row post_holder">
+        <div class=" twelve columns description">
+          <div class="description_inner">
+            <%= markdown(project.description) %>
+            <div class="six columns image_holder">
+              <%= image_tag(project.photos.first.image.url)%>
+            </div><!--image_holder-->
+          </div><!--description_inner-->
+        </div><!--description-->
+      </div><!--row-->
+      
+    </li>
+  <% end %>
+</ul><!--listing-->
+  </div>
+</div><!--row-->
+</div><!--content-->

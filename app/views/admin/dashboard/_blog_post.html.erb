@@ -1,0 +1,29 @@
+ <div class="tab_content_inner"> 
+<% @blog_posts.each do |post| %>
+  
+  <div class="row">
+  <h3 class="eight columns title"><%= post.title %></h3>
+  <div class="four columns links">
+    <%=link_to "Show", [:admin, post], class:"show_link" %>
+    <%=link_to "Edit", edit_admin_page_path(post), class:"edit_link" %>
+    <%=link_to "Delete", [:admin, post], class:"delete_link", method: :delete, confirm: "Are you sure?" %>
+  </div><!--links-->
+  </div><!--row-->
+  
+  <span class="meta"> Last updated on: <%= post.updated_at.strftime("%d %B %Y") %></span>
+    <% if post.tags.any? %>
+     <span class="tags">Tagged with: 
+      <% post.tags.each do |tag| %>
+        <%= link_to tag.name, tag_path(tag.name) %>
+      <% end %>
+     </span>
+    <% end %>
+  <p>
+
+  <div class="tab_post_content">
+    <%= markdown(post.content) %>
+  </div>
+  
+<% end %>
+</div><!--tab_content_inner-->
+<%= will_paginate(@blog_posts, :param_name => 'blog_page') %>

@@ -1,0 +1,21 @@
+<h1>Listing projects tagged "<%= @tag %>"</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Description</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @projects.each do |project| %>
+  <tr>
+    <td><%= project.title %></td>
+    <td><%= markdown(project.description) %></td>
+    <td><%= link_to 'Show', project %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />

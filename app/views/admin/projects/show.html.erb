@@ -1,0 +1,51 @@
+<div class="content">
+  <div class="row">
+    <div class="content_inner clearfix">
+    <header>
+      <h2 class="nine columns"><%= @project.title %></h2>
+      <div class="three columns links">
+          <div class="right">
+            <%=link_to "Edit", edit_admin_project_path(@project), class:"edit_link " %>
+            <%=link_to "Delete", [:admin, @project], class:"delete_link", method: :delete, confirm: "Are you sure?" %>
+          </div>
+        </div><!--links-->
+    </header>
+    <div class="show_page">
+    <div class="row tag_container">
+      <div class="tag_list ten columns show-on-desktops">
+        <% if @project.tags.any? %>
+         <span class="tags">Tagged with: 
+          <% @project.tags.each do |tag| %>
+            <%= link_to tag.name, tag_path(tag.name) %>
+          <% end %>
+         </span>
+        <% end %>
+      </div><!--tag_list-->
+      
+      <p class="two columns last_modified_on">
+        <span class="right">Last modified<br /> <strong><%= @project.updated_at.strftime("%d %b %Y")%></strong></span></p>
+    </div><!--row-->
+
+      <div class="row post_holder">
+        <div class=" twelve columns">
+          <div class="description_inner">
+            <%= markdown(@project.description) %>
+          </div><!--description_inner-->
+        </div><!--description-->
+      </div><!--row-->
+      
+      <div class="row">
+        <% @project.photos.each do |photo| %>
+        <div class="seven columns image_holder">
+          <%= image_tag photo.image.url, class:"project_image" %>
+        </div><!--image_holder-->
+        <% end %>
+      </div><!--row-->
+      
+
+  </div>
+  </div><!-- show_page-->
+</div><!--row-->
+</div><!--content-->
+
+

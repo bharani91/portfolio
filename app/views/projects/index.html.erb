@@ -1,0 +1,30 @@
+<div class="wrapper inner_page">
+	<section id="portfolio_list" class="clearfix">
+	<div class="content_header clearfix">
+		<h3>Selected Works</h3>
+		<p class="intro">Here's a small collection of my most recent works.</p>
+	</div><!--content-header-->
+	
+	<ul class="portfolio_tags clearfix">
+		<li>Media</li>
+		<li><%= link_to "Web", tag_path("web"), class:"web" %></li>
+		<li><%= link_to "Web", tag_path("web"), class:"mobile" %></li>
+		<li><%= link_to "Web", tag_path("web"), class:"tablet" %></li>
+	</ul>
+	<% @projects.each do |project| %>
+		<div class="box">
+			<div class="image_wrapper">
+				<%= image_tag(project.photos.first.image.url)%>
+				<div class="overlay">
+				  <h3><%= project.title %></h3>
+					<%= link_to "View Project", project %>
+				</div><!--overlay-->
+			</div><!--image_wrapper-->
+		</div><!--box-->
+	<% end %>
+	
+	
+	</section><!--portfolio_list-->
+</div><!--wrapper-->
+
+

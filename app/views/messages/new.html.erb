@@ -1,0 +1,62 @@
+<div class="wrapper inner_page">
+	<section id="contact">
+		<div class="content_header clearfix">
+			<h3>Drop Me a Line</h3>
+			<p class="intro">Fill out this form and I'll get in touch shortly.</p>
+		</div><!--content-header-->
+	
+    <%= form_for(@message) do |f| %>
+      <% if @message.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@message.errors.count, "error") %> prohibited this message from being saved:</h2>
+
+          <ul>
+          <% @message.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+          </ul>
+        </div>
+      <% end %>
+
+      <div class="field clearfix">
+        <%= f.label :name %>
+        <%= f.text_field :name, placeholder:"John Doe" %>
+      </div>
+      <div class="field clearfix">
+        <%= f.label :email %>
+        <%= f.text_field :email, placeholder:"john@doe.com" %>
+      </div>
+      <div class="field clearfix">
+        <%= f.label :website %>
+        <%= f.text_field :website, placeholder:"www.johndoe.com" %>
+      </div>
+      <div class="field clearfix">
+        <%= f.label :subject %>
+        <%= f.text_field :subject %>
+      </div>
+      <div class="field clearfix">
+        <%= f.label :message %>
+        <%= f.text_area :message %>
+      </div>
+      <div class="actions clearfix">
+        <%= f.submit "Send" %>
+      </div>
+    <% end %>
+		
+		<div class="social">
+			<h3>Elsewhere</h3>
+			<ul>
+				<li><a href="#">Twitter</a></li>
+				<li><a href="#">Dribbble</a></li>
+				<li><a href="#">Delicious</a></li>
+				<li><a href="#">Github</a></li>
+			</ul>
+		</div><!--social-->
+	
+	
+	</section>
+	
+	
+</div><!--wrapper-->
+
+

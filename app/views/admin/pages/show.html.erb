@@ -1,0 +1,40 @@
+<div class="content">
+  <div class="row">
+    <div class="content_inner clearfix">
+    <header>
+      <h2 class="nine columns"><%= @page.title %></h2>
+      <div class="three columns links">
+          <div class="right">
+            <%=link_to "Edit", edit_admin_page_path(@page), class:"edit_link " %>
+            <%=link_to "Delete", [:admin, @page], class:"delete_link", method: :delete, confirm: "Are you sure?" %>
+          </div>
+        </div><!--links-->
+    </header>
+    <div class="show_page">
+    <div class="row tag_container">
+      <div class="tag_list ten columns show-on-desktops">
+        <% if @page.tags.any? %>
+         <span class="tags">Tagged with: 
+          <% @page.tags.each do |tag| %>
+            <%= link_to tag.name, tag_path(tag.name) %>
+          <% end %>
+         </span>
+        <% end %>
+      </div><!--tag_list-->
+      
+      <p class="two columns last_modified_on">
+        <span class="right">Last modified<br /> <strong><%= @page.updated_at.strftime("%d %b %Y")%></strong></span></p>
+    </div><!--row-->
+
+      <div class="row post_holder">
+        <div class=" twelve columns">
+          <div class="description_inner">
+            <%= markdown(@page.content) %>
+          </div><!--description_inner-->
+        </div><!--description-->
+      </div><!--row-->
+  </div>
+  
+  </div><!--show-page-->
+</div><!--row-->
+</div><!--content-->
