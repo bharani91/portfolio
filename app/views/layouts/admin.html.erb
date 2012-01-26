@@ -37,7 +37,13 @@
       
      
   <div class="container">  
-
+    <% if notice %>
+        <div class="row">
+          <div class="alert-box">
+             <%= notice %><a href="" class="close">&times;</a>
+          </div><!--alert-->
+        </div><!--row-->
+    <% end %>
         <%= yield %>
     
   </div>

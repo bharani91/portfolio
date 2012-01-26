@@ -1,7 +1,7 @@
 Portfolium::Application.routes.draw do
 
   resources :projects, :only => [:index, :show]
-  resources :messages, :only => [:index, :show]
+  resources :messages, :only => [:new, :create]
   resources :pages, :only => [:index, :show]
   
   root to: "sessions#home"

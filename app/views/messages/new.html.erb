@@ -5,7 +5,7 @@
 			<p class="intro">Fill out this form and I'll get in touch shortly.</p>
 		</div><!--content-header-->
 	
-    <%= form_for(@message) do |f| %>
+    <%= form_for(@message, remote:true) do |f| %>
       <% if @message.errors.any? %>
         <div id="error_explanation">
           <h2><%= pluralize(@message.errors.count, "error") %> prohibited this message from being saved:</h2>
@@ -42,6 +42,8 @@
         <%= f.submit "Send" %>
       </div>
     <% end %>
+    
+    <div id="thanks" style="display:none">Thanks for your message. <br />I'll get in touch shortly.</div>
 		
 		<div class="social">
 			<h3>Elsewhere</h3>
