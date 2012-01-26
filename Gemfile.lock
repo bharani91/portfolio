@@ -74,6 +74,7 @@ GEM
       activesupport (>= 2.3.2)
       cocaine (>= 0.0.2)
       mime-types
+    pg (0.12.2)
     polyglot (0.3.3)
     pygments.rb (0.2.4)
       rubypython (~> 0.5.3)
@@ -148,6 +149,7 @@ DEPENDENCIES
   nested_form!
   nokogiri
   paperclip
+  pg
   pygments.rb
   rails (= 3.1.0)
   redcarpet (= 1.17.2)
