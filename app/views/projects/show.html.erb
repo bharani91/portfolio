@@ -17,7 +17,7 @@
 	  
 		<% @project.photos.each do |photo| %>
 		  <div class="image_wrapper">
-        <%= image_tag photo.image.url %>
+        <%= image_tag photo.image.url(:large) %>
        </div><!--image_wrapper-->
     <% end %>
 	   

@@ -1,5 +1,5 @@
 class Photo < ActiveRecord::Base
-  has_attached_file :image
+  has_attached_file :image, :styles => { :small => "230x375#", :large => "800x600#" }  
        
   belongs_to :project
   

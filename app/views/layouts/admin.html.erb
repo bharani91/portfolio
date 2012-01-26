@@ -17,7 +17,7 @@
             </div><!--three-columns-->
     
     
-          <nav class="right show-on-desktops">
+          <nav class="right hide-on-mobile">
             <ul class="nav-bar">
               	<% if current_user %>
               	    <li><%= link_to "Dashboard", admin_dashboard_path, class:"dashboard"%></li>
@@ -29,7 +29,7 @@
             
             
           </nav>
-          <a href="<%= logout_path %>" title="Logout"><%= image_tag avatar_url(current_user), class:"avatar right show-on-desktops" %></a>
+          <a href="<%= logout_path %>" title="Logout"><%= image_tag avatar_url(current_user), class:"avatar right hide-on-mobile" %></a>
           
           
       </div><!--row-->

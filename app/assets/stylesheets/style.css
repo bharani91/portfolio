@@ -573,9 +573,10 @@ section#portfolio_content div.image_wrapper	{
 	box-shadow: 0 7px 0px #000;
 	margin-bottom: 30px;
 	  border-radius: 2px 2px 2px 2px;
-	  height: 550px;
+	  height: 600px;
 	  overflow: hidden;
-    width: 840px;
+    width: 800px;
+    margin-left: 20px;
 		position: relative;
 		-webkit-transition: all 0.3s ease-in;
 		-moz-transition: all 0.3s ease-in;

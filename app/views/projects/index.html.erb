@@ -14,7 +14,7 @@
 	<% @projects.each do |project| %>
 		<div class="box">
 			<div class="image_wrapper">
-				<%= image_tag(project.photos.first.image.url)%>
+				<%= image_tag(project.photos.first.image.url(:small))%>
 				<div class="overlay">
 				  <h3><%= project.title %></h3>
 					<%= link_to "View Project", project %>

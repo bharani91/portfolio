@@ -1,5 +1,6 @@
-<div class="content">
+
   <div class="row">
+  <div class="content">
     <div class="content_inner clearfix">
     <header>
       <h2 class="nine columns"><%= @project.title %></h2>
@@ -12,7 +13,7 @@
     </header>
     <div class="show_page">
     <div class="row tag_container">
-      <div class="tag_list ten columns show-on-desktops">
+      <div class="tag_list ten columns hide-on-mobile">
         <% if @project.tags.any? %>
          <span class="tags">Tagged with: 
           <% @project.tags.each do |tag| %>

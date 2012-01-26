@@ -1,9 +1,9 @@
-<div class="content">
   <div class="row">
+    <div class="content">
     <div class="content_inner clearfix">
 <ul class="twelve columns listing">
   <header>
-  <h2 class="nine columns show-on-desktops">Listing all projects</h2>
+  <h2 class="nine columns hide-on-mobile">Listing all projects</h2>
    <div class="three columns"><%= link_to "New Post", new_admin_project_path, class:" right nice button" %></div>
    </header>
   <% @projects.each do |project| %>
@@ -16,7 +16,7 @@
       </div><!--header--> 
       
       <div class="row tag_container">
-        <div class="tag_list eight columns show-on-desktops">
+        <div class="tag_list eight columns hide-on-mobile">
           <% if project.tags.any? %>
            <span class="tags">Tagged with: 
             <% project.tags.each do |tag| %>
