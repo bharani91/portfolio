@@ -397,30 +397,32 @@ div.content_header	{
 	margin: 20px 0;
 	}
 
-div.content_header:hover h3	{
-	font-family: "MenschBoldInline", Impact, sans-serif
-	}
-	
 div.content_header h3	{
 	background: #211628;
 	background: rgba(0,0,0,0.3);
     color: #B6EDF0;
     display: inline-block;
     font-family: "MenschBold";
-    font-size: 45px;
-    padding: 0 15px;
+    font-size: 40px;
+    padding: 3px 15px;
+    
     text-align: center;
     text-shadow: 0 4px 0 #121119;
 	float:left;
 	}
-	
+
+div.content_header:hover h3	{
+	font-family: "MenschBoldInline", Impact, sans-serif
+	}
+		
+
 div.content_header p.intro	{
 	background: #2B1628;
 	background: rgba(0,0,0,0.3);
   color: #FFFFFF;
   font-family: "Jura";
   font-size: 20px;
-	margin: 20px 0;
+	margin: 15px 0;
 	padding: 0 10px;
 	display: inline-block;
 	}

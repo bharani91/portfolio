@@ -88,11 +88,14 @@ header#admin_bar nav ul li:last-child	{
 }
 
 header#admin_bar nav ul li a	{
-	color: #fff;
-	font-weight: bold;
-	text-shadow: 0 1px 1px #000;
-	font-size: 16px;
-	padding-left: 35px;
+    color: #FFFFFF;
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    height: 40px;
+    padding-left: 35px;
+    padding-right: 5px;
+    text-shadow: 0 1px 1px #000000;
 }
 
 header#admin_bar nav ul li:hover 	{
@@ -101,19 +104,19 @@ header#admin_bar nav ul li:hover 	{
 
 
 header#admin_bar nav ul li a.dashboard	{
-	background: url(../assets/dasboard.png) 5px center no-repeat;
+	background: url(../assets/dasboard.png) 5px 4px no-repeat;
 }
 
 header#admin_bar nav ul li a.project	{
-	background: url(../assets/projects.png) 5px center no-repeat;
+	background: url(../assets/projects.png) 5px 4px no-repeat;
 }
 
 header#admin_bar nav ul li a.blog	{
-	background: url(../assets/posts.png) 5px center no-repeat;
+	background: url(../assets/posts.png) 5px 4px no-repeat;
 }
 
 header#admin_bar nav ul li a.messages	{
-	background: url(../assets/messages.png) 5px center no-repeat;
+	background: url(../assets/messages.png) 5px 4px no-repeat;
 	padding-left: 38px;
 }
 

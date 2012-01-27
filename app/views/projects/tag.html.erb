@@ -1,21 +1,30 @@
-<h1>Listing projects tagged "<%= @tag %>"</h1>
+<div class="wrapper inner_page">
+	<section id="portfolio_list" class="clearfix">
+	<div class="content_header clearfix">
+		<h3><%= @tag %></h3>
+		<p class="intro">Listing projects tagged with "<%= @tag %>".</p>
+	</div><!--content-header-->
+	
+	<ul class="portfolio_tags clearfix">
+		<li>Media</li>
+		<li><%= link_to "Web", tag_path("web"), class:"web" %></li>
+		<li><%= link_to "Web", tag_path("web"), class:"mobile" %></li>
+		<li><%= link_to "Web", tag_path("web"), class:"tablet" %></li>
+	</ul>
+	<% @projects.each do |project| %>
+		<div class="box">
+			<div class="image_wrapper">
+				<%= image_tag(project.photos.first.image.url(:small))%>
+				<div class="overlay">
+				  <h3><%= project.title %></h3>
+					<%= link_to "View Project", project %>
+				</div><!--overlay-->
+			</div><!--image_wrapper-->
+		</div><!--box-->
+	<% end %>
+	
+	
+	</section><!--portfolio_list-->
+</div><!--wrapper-->
 
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Description</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
 
-<% @projects.each do |project| %>
-  <tr>
-    <td><%= project.title %></td>
-    <td><%= markdown(project.description) %></td>
-    <td><%= link_to 'Show', project %></td>
-  </tr>
-<% end %>
-</table>
-
-<br />
