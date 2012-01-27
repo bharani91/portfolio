@@ -826,7 +826,95 @@ ul#skills li:first-child	{
 ul#skills li:hover	{
 	color:#fff;
 	}
+	
+/*------------------LOGIN---------------------*/
 
+section#login {
+  width: 500px;
+  margin: 30px auto;
+  padding: 20px;
+  background: rgba(0,0,0,0.3);
+}
+
+
+section#login h3  {
+  color: #fff;
+  font-size: 30px;
+  margin-bottom: 0;
+}
+
+
+	
+section#login form div.field	{
+	position: relative;
+	padding-top:15px;
+	padding-bottom: 0;
+
+	}
+	
+section#login form div.field label	{
+	position: absolute;
+	top: 20px;
+	font-family: "Jura", sans-serif;
+	left: 0px;
+	width: 160px;
+	color: #fff;
+	font-size: 22px;
+	font-weight: 500;
+	}
+	
+section#login form div.field input[type="text"], section#login form div.field input[type="password"]	{
+	width: 460px;
+	float: left;
+	padding: 10px;
+	border: 5px solid #2b1628;
+	background: #b6edf0;
+	border-radius: 3px;
+	font-size: 18px;
+	margin-top: 30px;
+		-webkit-transition: all 0.3s ease-in;
+	-moz-transition: all 0.3s ease-in;
+	transition: all 0.3s ease-in;
+	}
+	
+section#login form div.field label.remember {
+  left: 30px;
+  top: 23px;
+}
+	
+section#login form div.field input#remember_me {
+  width: 30px;
+  height: 30px;
+  padding: 10px;
+  margin:10px;
+}
+	
+section#login form div.field input:hover, section#login form div.field input:focus	{
+	background: #fff;
+	border: 5px solid #eaa656;
+	}
+	
+section#login form input[type="submit"]	{
+	background: none repeat scroll 0 0 #EAA656;
+    border: 5px solid #000;
+    border-radius: 3px 3px 3px 3px;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.9) inset, 0 0 10px #000000;
+    font-family: "MenschBold";
+    font-size: 22px;
+    margin: 10px 10px 10px 150px;
+    padding: 8px;
+    text-shadow: 0 1px 1px #FFFFFF;
+    width: 160px;
+	cursor: pointer;
+	
+		-webkit-transition: all 0.3s ease-in;
+	-moz-transition: all 0.3s ease-in;
+	transition: all 0.3s ease-in;
+	}
+	
+section#login form input[type="submit"]:hover, section#login form input[type="submit"]:focus	{
+	background: #f4c288;
+	}
 
 
 	
