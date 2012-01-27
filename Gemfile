@@ -25,7 +25,7 @@ gem "sorcery"
 
 # Photo upload
 gem "paperclip"
-gem "nested_form", :git => 'git://github.com/ryanb/nested_form.git'
+gem 'awesome_nested_fields'
 
 
 # Foundation

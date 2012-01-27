@@ -4,4 +4,7 @@ $(function() {
     $.get(this.href, null, null, 'script');
     return false;
   });
+  
+  $('form').nestedFields();
+
 });

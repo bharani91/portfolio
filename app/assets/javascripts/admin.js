@@ -7,7 +7,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require foundation
-//= require nested_form
+//= require jquery.nested-fields
 //= require admin_script
 
 

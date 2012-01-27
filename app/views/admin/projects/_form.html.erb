@@ -1,4 +1,4 @@
-<%= nested_form_for([:admin, @project], html: { multipart: true }) do |f| %>
+<%= form_for([:admin, @project], html: { multipart: true }) do |f| %>
   <% if @project.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@project.errors.count, "error") %> prohibited this project from being saved:</h2>
@@ -20,18 +20,21 @@
     <%= f.label :tag_list, "Tags", class:"eight columns centered" %>
     <%= f.text_field :tag_list, class:"eight columns centered" %>
   </div>
-  
-  <%= f.fields_for :photos do |image_form| %>
-  <div class="field clearfix eight columns centered">
+  <div class="items cleafix">
+  <%= f.nested_fields_for :photos do |image_form| %>
+  <div class="item field clearfix eight columns centered">
     <%= image_form.label :image %>
     <%= image_form.file_field :image, class:"eight columns" %>
   
 
+    <a href="#" class="remove remove_link two columns">Remove Photo</a>
 
-    <%= image_form.link_to_remove "Remove this photo", class:"remove_link two columns" %>
-    </div>
-  <% end %>
-  <p><%= f.link_to_add "Add a photo", :photos, class:"add_link eight columns centered" %></p>
+    <%= image_form.hidden_field :id %>
+    <%= image_form.hidden_field :_destroy %>
+ </div><!--item-->
+ <% end %>
+ </div><!--items-->
+  <p><a href="#" class="add add_link eight columns centered">Add Photo</a></p>
   
   <div class="field">
     <%= f.label :description, class:"eight columns centered" %>
@@ -44,3 +47,4 @@
     <%= f.submit class:"nice big blue button"  %>
   </div>
 <% end %>
+
