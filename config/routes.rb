@@ -22,7 +22,7 @@ Portfolium::Application.routes.draw do
   
   match "tag/:tag" =>"projects#tag", as: :tag 
   match "contact" => "messages#new", as: :contact
-  match 'about' => 'pages#show', :defaults => { :id => '3-About' }, as: :about
+  match 'about' => 'pages#show', :defaults => { :id => '1' }, as: :about
   match "blog" => "pages#index", as: :blog
   
   # The priority is based upon order of creation:

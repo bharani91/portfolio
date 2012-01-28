@@ -6,12 +6,7 @@
 	</div><!--content-header-->
 	<div class="desc">
 	  <div class="text"><%= markdown(@project.description) %></div>
-	  <ul class="tag_list">
-  	  <% @project.tags.each do |tag| %>
-        <li><%= link_to tag.name, tag_path(tag.name) %></li>
-        <% end %>
-    </ul>
-  </div><!--desc-->
+    </div><!--desc-->
 
   <section id="portfolio_content">
 	  

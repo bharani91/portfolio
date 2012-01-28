@@ -62,16 +62,27 @@ body	{
 	}
 	
 body p	{
-	line-height: 1.2;
+	line-height: 1.6;
+	font-size: 20px;
+	margin-bottom: 15px;
+	text-shadow: 0 1px 0 #000;
 }
 
-a:link	{
-	color: #201706;
+body h5	{
+	font-size: 22px;
+	margin-bottom: 20px;
+}
+a {
+	color: #eaab56;
 	text-decoration: none;
 	font-weight: bold;
 	outline: 0;
 	outline: none;
 	}
+	
+a:hover	{
+	color: #f9ffdd;
+}
 
 a:visited	{
 	text-decoration: none;
@@ -91,6 +102,9 @@ header, section, nav	{
 	display:block;
 	}
 	
+input	{
+	outline: none;
+}
 
 /*------------------BASE---------------------*/
 .bgwidth { width: 100%; }
@@ -402,7 +416,7 @@ div.content_header h3	{
 	background: rgba(0,0,0,0.3);
     color: #B6EDF0;
     display: inline-block;
-    font-family: "MenschBold";
+    font-family: "MenschBoldInline";
     font-size: 40px;
     padding: 3px 15px;
     
@@ -412,7 +426,7 @@ div.content_header h3	{
 	}
 
 div.content_header:hover h3	{
-	font-family: "MenschBoldInline", Impact, sans-serif
+	font-family: "MenschBold", Impact, sans-serif
 	}
 		
 
@@ -591,6 +605,7 @@ section#portfolio_content div.image_wrapper img	{
 		-webkit-transition: all 0.3s ease-in;
 		-moz-transition: all 0.3s ease-in;
 		transition: all 0.3s ease-in;
+		border: 1px dashed rgba(255, 255, 255, 0.8);
 		}
 
 section#portfolio_content div.image_wrapper:hover	{
@@ -768,10 +783,19 @@ section#main_content	{
 	background: #2b1628;
 	background: rgba(0,0,0,0.3);
 	color: #fff;
-	font-size: 16px;
-	line-height: 1.8;
 	}
 	
+section#main_content h5, section#main_content h6	{
+	font-size: 24px;
+	padding-bottom: 10px;
+	border-bottom: 2px dashed rgba(255, 255, 255, 0.5);
+	margin-bottom: 15px;	
+}
+
+section#main_content p	{
+	margin-bottom: 15px;
+}
+
 section#default_content	{
 	width: 880px;
 	float: left;
@@ -786,6 +810,7 @@ section#default_content	{
 section#default_content	h1, section#default_content	 h2, section#default_content	 h3, section#default_content	 h4, section#default_content	h5, section#default_content	h6, section#default_content	 p	{
 	color: #fff;
 }
+
 	
 aside#sidebar	{
 	width: 200px;
@@ -803,6 +828,10 @@ aside#sidebar div.profile_picture	{
 	margin-left: 40px;
 	}
 	
+aside#sidebar div.profile_picture img	{
+	border: 1px dashed rgba(255, 255, 255, 0.5);
+}
+
 ul#skills	{
 	width: 880px;
 	float: left;
