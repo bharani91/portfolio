@@ -6,8 +6,10 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require "foundation/app"
+//= require foundation
 //= require jquery.nested-fields
 //= require admin_script
 
-
+  $(function()  {
+    $('form').nestedFields();
+  });

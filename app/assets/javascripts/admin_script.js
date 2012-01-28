@@ -5,6 +5,5 @@ $(function() {
     return false;
   });
   
-  $('form').nestedFields();
 
 });
