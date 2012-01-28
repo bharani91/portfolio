@@ -6,8 +6,6 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require "foundation/forms.jquery"
-//= require "foundation/jquery.customforms"
 //= require "foundation/app"
 //= require jquery.nested-fields
 //= require admin_script
