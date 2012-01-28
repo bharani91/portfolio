@@ -15,6 +15,7 @@ end
 group :assets do
   gem 'sass-rails',   '~> 3.1.0'
   gem "uglifier"
+  gem "zurb-foundation"
 end
 
 gem 'jquery-rails'
@@ -29,7 +30,7 @@ gem 'awesome_nested_fields'
 
 
 # Foundation
-gem "zurb-foundation"
+
 
 gem "will_paginate", "~> 3.0"
 
