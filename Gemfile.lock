@@ -37,6 +37,10 @@ GEM
     arel (2.2.1)
     awesome_nested_fields (0.6.0)
       rails (>= 3.0.0)
+    aws-s3 (0.6.2)
+      builder
+      mime-types
+      xml-simple
     bcrypt-ruby (3.0.1)
     blankslate (2.1.2.4)
     builder (3.0.0)
@@ -136,6 +140,7 @@ GEM
       execjs (>= 0.3.0)
       multi_json (>= 1.0.2)
     will_paginate (3.0.2)
+    xml-simple (1.1.1)
     zurb-foundation (2.1.5.1)
       jquery-rails (>= 1.0)
       rails (~> 3.1)
@@ -146,6 +151,7 @@ PLATFORMS
 DEPENDENCIES
   acts-as-taggable-on (~> 2.2.2)
   awesome_nested_fields
+  aws-s3
   bcrypt-ruby (~> 3.0.0)
   jquery-rails
   nokogiri

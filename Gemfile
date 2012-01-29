@@ -27,7 +27,7 @@ gem "sorcery"
 # Photo upload
 gem "paperclip"
 gem 'awesome_nested_fields'
-
+gem 'aws-s3'
 
 # Foundation
 
