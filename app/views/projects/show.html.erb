@@ -12,7 +12,7 @@
 	  
 		<% @project.photos.each do |photo| %>
 		  <div class="image_wrapper">
-        <%= image_tag photo.image.url(:large) %>
+        <%= image_tag photo.image.url %>
        </div><!--image_wrapper-->
     <% end %>
 	   
