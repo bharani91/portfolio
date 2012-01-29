@@ -6,7 +6,8 @@ class Photo < ActiveRecord::Base
     :s3_credentials => {
       :access_key_id => ENV['S3_KEY'],
       :secret_access_key => ENV['S3_SECRET']
-    }
+    },
+    :path => ":id/:hash/:style.:extension"
        
   belongs_to :project
   
