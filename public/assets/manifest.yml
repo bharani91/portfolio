@@ -26,6 +26,7 @@ frontend/header.png: frontend/header-6c8b8e7f3cf14dc1158272bccd9b3901.png
 frontend/hello_noise.png: frontend/hello_noise-a50b778a03047dd824f3a0b0baefaae0.png
 frontend/mobile.png: frontend/mobile-3530bd4bc131b2878ff558ea29117b5a.png
 frontend/or.png: frontend/or-56b23d7051be23f6d6034396881b9049.png
+frontend/profile_pic_small.jpg: frontend/profile_pic_small-f35337bd214ee148866e98f9da48df9e.jpg
 frontend/tablet.png: frontend/tablet-2077c58323f461e3a75ba9f62d46c5e5.png
 frontend/web.png: frontend/web-64449e01fa0a9e0502989ba585feb27d.png
 messages.png: messages-04b46201e6e14100f64715dc44dbdaa0.png
@@ -60,4 +61,4 @@ foundation/jquery.reveal.js: foundation/jquery.reveal-df803eea7636045f0b4a52fa4e
 foundation/jquery.tooltips.js: foundation/jquery.tooltips-f71baa8fdc32eccca95c15322556471b.js
 foundation/modernizr.foundation.js: foundation/modernizr.foundation-7ee48218dc61e6fad54781f661b6c150.js
 application.js: application-35089b27fe643cfb637abd2fc0320188.js
-application.css: application-508ec60a508e7fa17bcf805d3b540678.css
+application.css: application-736fa3e23a4c58f11ffeae1fe09e17f8.css
