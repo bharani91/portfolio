@@ -28,6 +28,7 @@ gem "sorcery"
 gem "paperclip"
 gem 'awesome_nested_fields'
 gem 'aws-s3'
+gem 'aws-sdk'
 
 # Foundation
 
