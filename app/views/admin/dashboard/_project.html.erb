@@ -11,13 +11,7 @@
         </div><!--links-->
       </div><!--row-->
       <span class="meta"> Last updated on: <%= project.updated_at.strftime("%d %B %Y") %>
-        <% if project.tags.any? %>
-         <span class="tags">Tagged with: 
-          <% project.tags.each do |tag| %>
-            <%= link_to tag.name, tag_path(tag.name) %>
-          <% end %>
-         </span>
-        <% end %>
+        
       </span><!--meta-->
 
       <div class="img_wrapper">
