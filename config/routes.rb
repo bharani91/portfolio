@@ -24,6 +24,7 @@ Portfolium::Application.routes.draw do
   match "contact" => "messages#new", as: :contact
   match 'about' => 'pages#show', :defaults => { :id => '1' }, as: :about
   match "blog" => "pages#index", as: :blog
+  match "resume" => "static_pages#resume", as: :resume
   
   # The priority is based upon order of creation:
   # first created -> highest priority.

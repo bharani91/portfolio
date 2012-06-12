@@ -186,7 +186,8 @@ header#top_bar ul	{
 	
 header#top_bar ul li	{
 	list-style-type: none;
-	font-size: 50px;
+	font-size: 34px;
+	padding-top: 15px;
 	float: left;
 	}
 
@@ -204,6 +205,7 @@ header#top_bar ul li a	{
 
 header#top_bar ul li.active	{
 	border-top: 6px solid white;
+	padding-top: 8px;
 	}
 	
 	
